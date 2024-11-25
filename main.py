@@ -66,7 +66,7 @@ if __name__ == "__main__":
     try:
         while True: # Ciclo infinito para el panel
             print("\nPega el link de musica de youtube: ")
-            print("Ejemplo: https://www.youtube.com/watch?v=9sYK_azN3Vo\n")
+            print("Ejemplo: (https://www.youtube.com/watch?v=UgYSUYamucI)\n")
             youtube_url = input("Link: ")
             if not youtube_url:
                 print("No se ingreso link")
