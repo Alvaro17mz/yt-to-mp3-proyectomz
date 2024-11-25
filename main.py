@@ -60,20 +60,22 @@ def procesar_cancion(url):
         os.remove(ruta_musica)
     return enlace_cancion
 
-# Flujo de trabajo
+# Flujo principal
 if __name__ == "__main__":
     print("App Funcionando...") # Le indica al Panel Pterodactyl que se encuentra funcionando
     try:
         while True: # Ciclo infinito para el panel
-            print("Pega el link de musica de YouTube.com: ")
+            print("\nPega el link de musica de youtube: ")
+            print("Ejemplo: https://www.youtube.com/watch?v=9sYK_azN3Vo\n")
             youtube_url = input("Link: ")
             if not youtube_url:
                 print("No se ingreso link")
                 continue
             enlace_streaming = procesar_cancion(youtube_url)
-            print(f"Enlace de la cancion: {enlace_streaming}")
+            print("\n===============================")
+            print(f"Enlace de la canción: {enlace_streaming}")
+            print("===============================\n")
 
     except KeyboardInterrupt: # Para detener en el panel
         print("App Detenida...")
-    except Exception as error:
-        print(f"Error: {error}")
+        
