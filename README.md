@@ -1,6 +1,6 @@
 
 ## 📖 Descripción
-Esta aplicación permite descargar música desde YouTube utilizando `yt-dlp`, convertirla a formato MP3 con `FFmpeg`, y subirla automáticamente al almacenamiento en la nube de BunnyStorage a través de FTP. También genera un enlace público para compartir el archivo subido.
+Esta aplicación permite descargar música desde YouTube utilizando `yt-dlp`, convertirla a formato MP3 con `FFmpeg`, y subirla automáticamente al almacenamiento en la nube a tu servicio FTP. También genera un enlace público para compartir el archivo subido.
 
 ---
 
