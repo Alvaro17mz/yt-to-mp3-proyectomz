@@ -32,7 +32,7 @@ def yt_dl(url):
             'preferredquality': '192',
         }],
         'ffmpeg_location': ffmpeg.get_ffmpeg_exe(),  # Indica la ubicación de FFmpeg portable
-        'noplaylist': True  # Descargar solo el video, ignorar listas de reproducción
+        'noplaylist': True  # Descargar solo el primer video, ignorar la lista de reproducción
     }
     with YoutubeDL(descarga) as ydl:
         informacion = ydl.extract_info(url, download=True)
