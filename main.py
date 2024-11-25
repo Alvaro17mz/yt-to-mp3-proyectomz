@@ -32,6 +32,7 @@ def yt_dl(url):
             'preferredquality': '192',
         }],
         'ffmpeg_location': ffmpeg.get_ffmpeg_exe(),  # Indica la ubicación de FFmpeg portable
+        'noplaylist': True  # Descargar solo el video, ignorar listas de reproducción
     }
     with YoutubeDL(descarga) as ydl:
         informacion = ydl.extract_info(url, download=True)
@@ -66,7 +67,7 @@ if __name__ == "__main__":
     try:
         while True: # Ciclo infinito para el panel
             print("\nPega el link de musica de youtube: ")
-            print("Ejemplo: https://www.youtube.com/watch?v=9sYK_azN3Vo\n")
+            print("Ejemplo: (https://www.youtube.com/watch?v=9sYK_azN3Vo)\n")
             youtube_url = input("Link: ")
             if not youtube_url:
                 print("No se ingreso link")
