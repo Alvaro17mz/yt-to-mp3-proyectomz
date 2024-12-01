@@ -8,3 +8,6 @@ descargas/
 # Archivos temporales del sistema
 .DS_Store
 Thumbs.db
+
+# Ignorar credenciales
+ftp_login.json
