@@ -34,14 +34,15 @@ Esta aplicación permite descargar música desde YouTube utilizando `yt-dlp`, co
     ```bash
     pip install -r requirements.txt
     ```
-3. Configura las credenciales de FTP en el archivo `main.py`:
-    ```python
-    FTP_USER = "tu-usuario"
-    FTP_HOST = "tu-host"
-    FTP_PASSWD = "tu-contraseña"
-    STREAM_URL = "link-publico"
+3. Crea un archivo llamado `ftp_login.json` en el directorio raíz del proyecto con el siguiente contenido.
+    ```bash
+    {
+        "FTP_USER": "tu-usuario",
+        "FTP_HOST": "tu-host",
+        "FTP_PASSWD": "tu-contraseña",
+        "STREAM_URL": "link-publico"
+    }
     ```
-
 ---
 
 ## 🚀 Uso
