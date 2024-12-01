@@ -1,15 +1,20 @@
 import os
 import random
 import string
+import json
 from yt_dlp import YoutubeDL
 import imageio_ffmpeg as ffmpeg
 from ftplib import FTP
 
-# Conexion a FTP
-FTP_USER = "tu-usuario"
-FTP_HOST = "tu-host"
-FTP_PASSWD = "tu-contraseña"
-STREAM_URL = "link-publico"
+def login_ftp(login):
+    with open(login, "r") as file:
+     return json.load(file)
+
+datos = login_ftp("ftp_login.json")
+FTP_USER = datos["FTP_USER"]
+FTP_HOST = datos["FTP_HOST"]
+FTP_PASSWD = datos["FTP_PASSWD"]
+STREAM_URL = datos["STREAM_URL"]
 
 # Carpeta donde almacena la musica para subirla
 carpeta_temporal = "./descargas"
@@ -55,6 +60,7 @@ def procesar_cancion(url):
     link_corto = url_corto() + ".mp3"
     print(f"Cancion descargada: {nombre_musica}")
     enlace_cancion = subir_musica(ruta_musica, link_corto)
+    print(f"Cancion subida con exito.")
 
 # Ahorro de espacio en el servidor
     if os.path.exists(ruta_musica):
